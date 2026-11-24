@@ -15,4 +15,7 @@
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
   font-variation-settings: "wght" var(--main-weight);
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
+  background-size: cover;
 }
