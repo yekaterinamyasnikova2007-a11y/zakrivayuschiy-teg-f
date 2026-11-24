@@ -23,3 +23,31 @@
   flex-direction: column;
   align-items: center;
 }
+
+.header {
+  width: var(--container-width);
+  background-color: #fff;
+  color: #000;
+  font-family: var(--accent-font), sans-serif;
+  border: 2px solid #000;
+}
+
+.header-logo {
+  display: grid;
+  padding: 130px 122px 130px 122px;
+  text-align: center;
+  gap: 20px;
+}
+
+.header-title {
+  font-size: 65px;
+  line-height: 100%;
+  font-weight: var(--main-weight);
+}
+
+.header-descriptor {
+  font-size: 23px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: var(--main-weight);
+}
