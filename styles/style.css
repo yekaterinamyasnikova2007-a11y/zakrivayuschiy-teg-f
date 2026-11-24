@@ -13,9 +13,13 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  padding: 100px 0 100px 0;
   font-family: var(--main-font), sans-serif;
   font-variation-settings: "wght" var(--main-weight);
   background-image: var(--background-gradient);
   background-attachment: fixed;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
