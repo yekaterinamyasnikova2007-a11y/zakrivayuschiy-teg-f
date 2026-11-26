@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 98px;
 }
 
 .header {
@@ -40,14 +41,109 @@
 }
 
 .header-title {
-  font-size: 65px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: 100%;
   font-weight: var(--main-weight);
 }
 
 .header-descriptor {
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 100%;
   text-transform: uppercase;
   font-weight: var(--main-weight);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+  font-family: var(--main-font), sans-serif;
+}
+
+.card {
+  display: grid;
+  width: var(--container-width);
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  display: block;
+  inline-size: 100%;
+}
+
+.card-label {
+  position: absolute;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  font-family: var(--accent-font), sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #000;
+  line-height: 100%;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  text-shadow:
+    -1px -1px 0 var(--label-stroke-color),
+     1px -1px 0 var(--label-stroke-color),
+    -1px  1px 0 var(--label-stroke-color),
+     1px  1px 0 var(--label-stroke-color);
+}
+
+@supports (-webkit-text-stroke: 1px #fff) {
+  .card-label {
+    -webkit-text-stroke: 2px var(--label-stroke-color);
+     paint-order: stroke fill;
+    text-shadow: none;
+  }
+}
+
+.card-title {
+  font-weight: var(--title-weight);
+  font-variation-settings: "wght" var(--title-weight);
+  font-size: 18px;
+  margin: 4px 10px 4px 10px;
+}
+
+.card-content {
+  display: grid;
+  gap: 25px;
+  margin: 25px;
+}
+
+.card-text {
+  font-weight: var(--main-weight);
+  font-weight: "wght" var(--main-weight);
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card__footer {
+  justify-self: end;
+  padding: 0px 25px 25px 0px;
+  gap: 12px;
+}
+
+.card__icon-button {
+
+}
+
+.card__like-button {
+  border: 2px solid #000;
+  width: 130px;
+  height: 38px;
+  background-color: transparent;
+}
+
+.button__text {
+  font-family: var(--accent-font);
+  font-weight: var(--main-weight);
+  font-size: 14px;
 }
