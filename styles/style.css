@@ -77,7 +77,22 @@ main {
 .card-image img {
   display: block;
   inline-size: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
 }
+
+.card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow:
+    inset 0 2px 0 0 #000000,
+    inset 0 -2px 0 0 #000000;
+  pointer-events: none;
+}
+
+
 
 .card-label {
   position: absolute;
