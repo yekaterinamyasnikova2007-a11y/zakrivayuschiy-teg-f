@@ -141,10 +141,13 @@ main {
 }
 
 .card__footer {
+  display: flex;
+  align-items: center;
   justify-self: end;
-  padding: 0px 25px 25px 0px;
+  padding: 0 25px 25px 0;
   gap: 12px;
 }
+
 
 .card__icon-button {
 }
@@ -216,4 +219,32 @@ main {
   min-width: 293px;
   min-height: 38px;
   background-color: #fff;
+}
+
+.filter-brightness {
+  filter: brightness(200%);
+}
+
+.filter-grayscale {
+  filter: grayscale(0.8);
+}
+
+.filter-saturate {
+  filter: saturate(158%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(-90deg);
+}
+
+.filter-invert {
+  filter: invert(0.7);
+}
+
+.filter-sepia {
+  filter: sepia(80%);
+}
+
+.filter-blur {
+  filter: blur(1rem);
 }
