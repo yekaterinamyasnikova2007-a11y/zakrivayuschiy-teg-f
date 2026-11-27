@@ -35,7 +35,7 @@
 
 .header-logo {
   display: grid;
-  padding: 130px 122px 130px 122px;
+  padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem) clamp(1rem, -1.3327rem + 9.9531vw, 7.625rem);
   text-align: center;
   gap: 20px;
 }
@@ -43,14 +43,12 @@
 .header-title {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: 100%;
-  font-weight: var(--main-weight);
 }
 
 .header-descriptor {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 100%;
   text-transform: uppercase;
-  font-weight: var(--main-weight);
 }
 
 main {
@@ -132,7 +130,6 @@ main {
 }
 
 .card-text {
-  font-weight: var(--main-weight);
   font-weight: "wght" var(--main-weight);
   font-size: 18px;
   line-height: 21px;
@@ -143,7 +140,7 @@ main {
   align-items: center;
   justify-self: end;
   padding: 0 25px 25px 0;
-  gap: 7px;
+  gap: 4px;
 }
 
 .card__icon-button {
@@ -157,7 +154,7 @@ main {
   border: 2px solid transparent;
   cursor: pointer;
   transition: border-color 0.3s ease;
-  padding: 0px 5px 0px 5px;
+  padding: 0;
 }
 
 .card__icon-button:focus {
@@ -300,4 +297,31 @@ main {
 
 .filter-blur {
   filter: blur(1rem);
+}
+
+@media (width <= 375px) {
+  .card__save-button {
+  display: grid;
+  gap: 8px;
+  align-content: center;
+  justify-items: center;
+  min-width: 306px;
+  min-height: 84px;
+  padding: 17px 20px 17px 20px;
+}
+
+.card__save-button svg {
+  width: 28px;
+  height: 28px;
+}
+
+.modal {
+  padding: 30px 40px 30px 40px;
+  max-width: 341px;
+}
+
+.modal__button {
+  min-width: 261px;
+}
+
 }
