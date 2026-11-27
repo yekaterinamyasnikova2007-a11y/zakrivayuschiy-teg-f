@@ -157,7 +157,7 @@ main {
   border: 2px solid transparent;
   cursor: pointer;
   transition: border-color 0.3s ease;
-  padding: 0px 5.5px 0px 5.5px;
+  padding: 0px 5px 0px 5px;
 }
 
 .card__icon-button:focus {
