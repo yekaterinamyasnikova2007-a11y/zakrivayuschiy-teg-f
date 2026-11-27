@@ -35,7 +35,8 @@
 
 .header-logo {
   display: grid;
-  padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem) clamp(1rem, -1.3327rem + 9.9531vw, 7.625rem);
+  padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem)
+    clamp(1rem, -1.3327rem + 9.9531vw, 7.625rem);
   text-align: center;
   gap: 20px;
 }
@@ -149,7 +150,6 @@ main {
   justify-content: center;
   padding: 0;
   block-size: 38px;
-  padding: 0 3px;
   background-color: transparent;
   border: 2px solid transparent;
   cursor: pointer;
@@ -264,7 +264,7 @@ main {
 }
 
 .modal__button {
-  grid-column: 1 / -1;  
+  grid-column: 1 / -1;
   border: 2px solid #000;
   min-width: 293px;
   min-height: 38px;
@@ -275,8 +275,8 @@ main {
   filter: brightness(200%);
 }
 
-.filter-grayscale {
-  filter: grayscale(0.8);
+.multi-filter {
+  filter: contrast(120%) brightness(105%) sepia(30%);
 }
 
 .filter-saturate {
@@ -301,27 +301,26 @@ main {
 
 @media (width <= 375px) {
   .card__save-button {
-  display: grid;
-  gap: 8px;
-  align-content: center;
-  justify-items: center;
-  min-width: 306px;
-  min-height: 84px;
-  padding: 17px 20px 17px 20px;
-}
+    display: grid;
+    gap: 8px;
+    align-content: center;
+    justify-items: center;
+    min-width: 306px;
+    min-height: 84px;
+    padding: 17px 20px 17px 20px;
+  }
 
-.card__save-button svg {
-  width: 28px;
-  height: 28px;
-}
+  .card__save-button svg {
+    width: 28px;
+    height: 28px;
+  }
 
-.modal {
-  padding: 30px 40px 30px 40px;
-  max-width: 341px;
-}
+  .modal {
+    padding: 30px 40px 30px 40px;
+    max-width: 341px;
+  }
 
-.modal__button {
-  min-width: 261px;
-}
-
+  .modal__button {
+    min-width: 261px;
+  }
 }
