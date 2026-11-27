@@ -92,8 +92,6 @@ main {
   pointer-events: none;
 }
 
-
-
 .card-label {
   position: absolute;
   inset-block-start: 25px;
@@ -148,7 +146,6 @@ main {
   gap: 12px;
 }
 
-
 .card__icon-button {
 }
 
@@ -164,6 +161,17 @@ main {
   font-weight: var(--main-weight);
   font-size: 14px;
   line-height: 90%;
+  position: relative;
+  z-index: 1;
+  color: var(--background-color);
+  mix-blend-mode: difference;
+}
+
+.button svg {
+  position: relative;
+  z-index: 1;
+  color: var(--background-color);
+  mix-blend-mode: difference;
 }
 
 .card__save-button {
@@ -175,6 +183,31 @@ main {
   min-width: 335px;
   min-height: 55px;
   background-color: #fff;
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--text-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
 }
 
 .modal {
